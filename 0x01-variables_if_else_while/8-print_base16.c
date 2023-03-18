@@ -13,13 +13,10 @@ int main(void)
 		putchar(ch1);
 		ch1++;
 	}
-	if (ch1 == '9')
+	while (ch2 <= 'f')
 	{
-		while (ch2 <= 'f')
-		{
-			putchar(ch2);
-			ch2++;
-		}
+		putchar(ch2);
+		ch2++;
 	}
 	putchar('\n');
 	return (0);
