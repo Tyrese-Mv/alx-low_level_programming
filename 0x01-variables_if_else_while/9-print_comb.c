@@ -15,7 +15,7 @@ int main(void)
 		num++;
 		if (num == '8')
 		{
-			num++
+			num++;
 			putchar(num);
 		}
 	}
