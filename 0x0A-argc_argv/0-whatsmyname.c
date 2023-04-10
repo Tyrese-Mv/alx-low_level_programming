@@ -1,4 +1,4 @@
-#include <stio.h>
+#include <stdio.h>
 /**
  * main - outputs first argument
  * @argc: argument count
