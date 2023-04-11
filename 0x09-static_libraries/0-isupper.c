@@ -4,7 +4,7 @@
  * @c: integer
  * Return: 1
  */
-int _islower(int c)
+int _isupper(int c)
 {
 	return (c);
 }
