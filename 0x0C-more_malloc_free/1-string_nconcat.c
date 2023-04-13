@@ -24,11 +24,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		j++;
 	if (n >= j)
 	{
-		ch = malloc(sizeof(char) * (i + n));
+		ch = malloc(sizeof(char) * (i + n + 1));
 	}
 	else
 	{
-		ch = malloc(sizeof(char) * (i + j));
+		ch = malloc(sizeof(char) * (i + j + 1));
 	}
 	if (ch == NULL)
 		return (NULL);
