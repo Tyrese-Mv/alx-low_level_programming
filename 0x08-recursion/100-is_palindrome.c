@@ -6,11 +6,9 @@
  */
 int str_len(char *s)
 {
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-		s++;
-	return (i);
+	if (s == '\0')
+		return (0);
+	return (1 + str_len(s + 1));
 }
 /**
  * check_pal - check for palindrome
