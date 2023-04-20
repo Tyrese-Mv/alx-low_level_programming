@@ -4,7 +4,6 @@
  * print_numbers - prints numbers
  * @separator: separator
  * @n: n
- * Return: void
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
