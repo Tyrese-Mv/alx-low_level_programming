@@ -7,11 +7,11 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
+	va_list i;
 	unsigned int k, l;
 
 	if (n == 0)
 		return (0);
-	va_list i;
 
 	va_start(i, n);
 	l = 0;
