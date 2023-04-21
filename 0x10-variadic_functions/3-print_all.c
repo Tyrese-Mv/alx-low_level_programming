@@ -15,9 +15,9 @@ void print_all(const char * const format, ...)
 	float j;
 
 	va_start(list, format);
-	while (*ch)
+	while (ch && *ch != '\0')
 	{
-		switch (*ch++)
+		switch (*ch)
 		{
 			case 'c':
 				ch2 = (char) va_arg(list, int);
@@ -43,9 +43,10 @@ void print_all(const char * const format, ...)
 			default:
 				continue;
 		}
-		if (*ch)
+		ch++;
+		if (*ch != '\0')
 			printf(", ");
 	}
-	va_end(list);
 	printf("\n");
+	va_end(list);
 }
