@@ -43,6 +43,8 @@ void print_all(const char * const format, ...)
 			default:
 				continue;
 		}
+		if (*ch)
+			printf(", ");
 	}
 	va_end(list);
 	printf("\n");
