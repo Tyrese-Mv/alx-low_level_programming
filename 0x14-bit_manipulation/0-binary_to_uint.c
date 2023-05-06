@@ -1,6 +1,22 @@
 #include "main.h"
 #include <stdlib.h>
 /**
+ * _strlen - length of string
+ * @b: string to measure
+ * Return: unsigned integer
+ */
+unsigned int _strlen(const char *b)
+{
+	unsigned int i = 0;
+
+	if (b == NULL)
+		return (0);
+	while (b[i] != '\0')
+		i++;
+	return (i);
+}
+
+/**
  * binary_to_uint - converts binary to decimal
  * @b: string to convert
  * Return: unsigned integer
