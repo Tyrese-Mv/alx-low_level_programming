@@ -7,13 +7,14 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i, len = _strlen(b), total = 0, octet = 1;
+	unsigned int len = _strlen(b), total = 0, octet = 1;
+	int i;
 
 	if (b == NULL)
 		return (0);
-	for (i = (len - 1); i >= 0; i--)
+	for (i = len ? (len - 1) : 0; i >= 0; i--)
 	{
-		if (b[i] != '1' || b[i] != '0')
+		if (b[i] != '1' && b[i] != '0')
 			return (0);
 		if (b[i] == '1')
 			total += octet;
