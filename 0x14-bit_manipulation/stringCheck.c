@@ -12,5 +12,5 @@ unsigned int _strlen(const char *b)
 		return (0);
 	while (b[i] != '\0')
 		i++;
-	return i;
+	return (i);
 }
