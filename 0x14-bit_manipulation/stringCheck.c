@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _strlen - checks length of the string
- * @b - string to be checked
+ * @b: string to be checked
  * Return: string length
  */
 unsigned int _strlen(const char *b)
