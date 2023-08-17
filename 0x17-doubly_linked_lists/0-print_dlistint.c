@@ -1,5 +1,5 @@
 #include "lists.h"
-/*
+/**
  * print_dlistint - print all the element of a doubly linked list
  * @h: pointer to the first node
  * Return: number of nodes
