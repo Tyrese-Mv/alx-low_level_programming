@@ -19,7 +19,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (current == NULL)
 		return (0);
 	current->key = strdup(key);
-	
 	if (*value == '\0')
 		current->value = '\0';
 	else
