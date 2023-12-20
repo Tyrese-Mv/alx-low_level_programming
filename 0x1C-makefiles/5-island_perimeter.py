@@ -16,17 +16,18 @@ def island_perimeter(grid):
         int: the perimeter of the island
     """
     count = 0
-    for o in range(len(grid)):
-        for i in range(len(grid[0])):
-            if grid[o][i] == 1:
-                perimCheck = 4
-                if grid[o-1][i] != 0:
-                    perimCheck -= 1
-                if grid[o][i+1] != 0:
-                    perimCheck -= 1
-                if grid[o][i-1] != 0:
-                    perimCheck -= 1
-                if grid[o+1][i] != 0:
-                    perimCheck -= 1
-                count += perimCheck
+    if len(grid) <= 100 and len(grid[0]) <= 100:
+        for o in range(len(grid)):
+            for i in range(len(grid[0])):
+                if grid[o][i] == 1:
+                    perimCheck = 4
+                    if grid[o-1][i] != 0:
+                        perimCheck -= 1
+                    if grid[o][i+1] != 0:
+                        perimCheck -= 1
+                    if grid[o][i-1] != 0:
+                        perimCheck -= 1
+                    if grid[o+1][i] != 0:
+                        perimCheck -= 1
+                    count += perimCheck
     return count
