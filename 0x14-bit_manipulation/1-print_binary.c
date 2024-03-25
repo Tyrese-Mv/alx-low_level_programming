@@ -6,15 +6,21 @@
 */
 void print_binary(unsigned long int n)
 {
-	int bits = sizeof(n) * 8 - 1;
-	unsigned long int mask = 1UL << bits;
+    int leading_one_found = 0;
+	unsigned long int mask;
 
-	while (mask > 0)
-	{
-		if (n & mask)
-			_putchar('1');
-		else
-			_putchar('0');
-		mask >>= 1;
-	}
+    for (mask = 1UL << (sizeof(unsigned long int) * 8 - 1); mask; mask >>= 1)
+    {
+        if (n & mask)
+        {
+            _putchar('1');
+            leading_one_found = 1;
+        }
+        else if (leading_one_found)
+        {
+            _putchar('0');
+        }
+    }
+    if (!leading_one_found)
+        _putchar('0');
 }
